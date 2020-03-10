@@ -1,0 +1,7 @@
+{
+  "name": "trafmap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
