@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- <button ion-button icon-only menuToggle>
+            <ion-icon name = "Menu"></ion-icon>
+        </button> -->
+        <ion-title>
+            Okponglo
+        </ion-title>
+        <!-- Anywhere you want to add a button just paste this -->
+        <ion-buttons slot="start">
+            <ion-menu-button autoHide="false">
+
+            </ion-menu-button>
+        </ion-buttons>
+        <!-- the code for pasting ends here -->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!--Main div-->
+    <div id=" container ">
+        <ion-row>
+            <ion-col text-center style="color:rgb(255, 254, 254) ">
+                Welcome to Trafmapp
+            </ion-col>
+        </ion-row>
+
+
+        <!--Graph div-->
+        <div class=" row ">
+            <div id="diagram " class="column-1 ">
+                <!-- <canvas id="graph " baseChart [datasets]="chartData " [labels]="chartLabels " [options]="chartOptions " [colors]="chartColors " [legend]="showLegend " [chartType]="chartType ">
+                </canvas> -->
+                <ion-card-content>
+                    <canvas #barChart>
+
+                    </canvas>
+                </ion-card-content>
+            </div>
+        </div>
+        <!--info row segement-->
+        <div class=" row ">
+            <!--Info col-1-->
+            <div class="column-2 ">
+                <p style="font-size:15px">
+                    Lane1 cars
+                </p>
+                <ion-list *ngFor="let customer of customers ">
+
+                    <ion-item>
+                        {{customer.Lane1}}
+                    </ion-item>
+                </ion-list>
+            </div>
+
+            <!--Info col-2-->
+            <div class=" column-2 ">
+                <p style="font-size:15px">
+                    Lane2 cars
+                </p>
+                <ion-list *ngFor="let customer of customers ">
+                    {{customer.Lane2}}
+                </ion-list>
+            </div>
+
+
+            <!--Info col-3-->
+            <div class="column-2 ">
+                <p style="font-size:15px">
+                    Total cars
+                </p>
+                <ion-list *ngFor="let customer of customers ">
+                    {{customer.TT_Lane1}}
+                </ion-list>
+            </div>
+
+        </div>
+        <!--info segement ends-->
+
+    </div>
+    <!--Main div ends-->
+</ion-content>
+
+<ion-footer (click)="logout() ">
+    <ion-toolbar color="secondary ">
+        <ion-title>Log out</ion-title>
+    </ion-toolbar>
+</ion-footer>

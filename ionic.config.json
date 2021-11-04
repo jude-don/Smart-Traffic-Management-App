@@ -1,7 +1,8 @@
 {
   "name": "trafmap",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
